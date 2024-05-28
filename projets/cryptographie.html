@@ -1,335 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-      <meta charset="utf-8" />
-      <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
-      <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
-      <title>Symfony et PHP</title>
-      <meta property="og:title" content="Symfony et PHP" />
-      <meta property="og:locale" content="fr_FR" />
-      <link rel="canonical" href="//veille1"/>
-      <meta property="og:url" content="//veille1"/>
-      <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
-      <link rel="icon" type="image/png" href="/assets/my_img/Logo_Portfolio.png" />
-      <meta name="theme-color" content="#5540af" />
-      <meta property="og:site_name" content="Symfony et PHP" />
-      <meta property="og:image" content="//assets/my_img/Logo_Portfolio.png" />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:site" content="@tailwindmade" />
-      <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
-      <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload"/>
-      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet"/>
-      <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
-      <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet"/>
-      <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
-      <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"/>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script>
-    </head>
+<head>
+    <meta charset="utf-8" />
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport"/>
+    <title>Cryptographie</title>
+    <meta property="og:title" content="Cryptographie" />
+    <meta property="og:locale" content="fr_FR" />
+    <link rel="canonical" href="//Cryptographie"/>
+    <meta property="og:url" content="//Cryptographie"/>
+    <meta name="description" content="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."/>
+    <link rel="icon" type="image/png" href="/assets/my_img/Logo_Portfolio.png" />
+    <meta name="theme-color" content="#5540af" />
+    <meta property="og:site_name" content="Cryptographie" />
+    <meta property="og:image" content="//assets/my_img/Logo_Portfolio.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@tailwindmade" />
+    <link crossorigin="crossorigin" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link as="style" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="preload"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet"/>
+    <link crossorigin="anonymous" href="/assets/styles/main.min.css" media="screen" rel="stylesheet"/>
+    <script defer src="https://unpkg.com/@alpine-collective/toolkit@1.0.0/dist/cdn.min.js"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/styles/atom-one-dark.min.css"/>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.7.2/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+</head>
 
 
-    <body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
-        <div id="main" class="relative">
+<body :class="{ 'overflow-hidden max-h-screen': mobileMenu }" class="relative" x-data="{ mobileMenu: false }">
+<div id="main" class="relative">
 
-          <div x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {mobileMenu = false;this.triggerNavItem(id)}}">
+    <div x-data="{triggerNavItem(id) {$scroll(id)},triggerMobileNavItem(id) {mobileMenu = false;this.triggerNavItem(id)}}">
 
         <!--En tête  -->
-            <div class="w-full z-50 top-0 py-3 sm:py-5  bg-black ">
-              <div class="container flex items-center justify-between">
+        <div class="w-full z-50 top-0 py-3 sm:py-5  bg-black ">
+            <div class="container flex items-center justify-between">
 
-        <!--    Logo NS  -->
+                <!--    Logo NS  -->
                 <div>
-                  <a href="/">
-                    <img src="/assets/my_img/Logo_Portfolio_1.png" class="w-15 lg:w-15" alt="logo image" />
-                  </a>
+                    <a href="/">
+                        <img src="/assets/my_img/Logo_Portfolio_1.png" class="w-15 lg:w-15" alt="logo image" />
+                    </a>
                 </div>
 
-        <!--    Nav Bar  -->
+                <!--    Nav Bar  -->
                 <div class="hidden lg:block">
-                  <ul class="flex items-center">
+                    <ul class="flex items-center">
 
-        <!--        Profil  -->
-                    <li class="group pl-6">
-                      <a href="/#profil" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Profil</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Profil  -->
+                        <li class="group pl-6">
+                            <a href="/#profil" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Profil</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Compétences  -->
-                    <li class="group pl-6">
-                      <a href="/#competences" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Compétences</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Compétences  -->
+                        <li class="group pl-6">
+                            <a href="/#competences" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Compétences</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Expérience professionnelle  -->
-                    <li class="group pl-6">
-                      <a href="/#ep" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Expérience professionnelle</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Expérience professionnelle  -->
+                        <li class="group pl-6">
+                            <a href="/#ep" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Expérience professionnelle</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Parcours Scolaire  -->
-                    <li class="group pl-6">
-                      <a href="/#ps" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Parcours Scolaire</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Parcours Scolaire  -->
+                        <li class="group pl-6">
+                            <a href="/#ps" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Parcours Scolaire</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Outils & Logiciels  -->
-                    <li class="group pl-6">
-                      <a href="/#ol" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Outils & Logiciels</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Outils & Logiciels  -->
+                        <li class="group pl-6">
+                            <a href="/#ol" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Outils & Logiciels</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Projets  -->
-                    <li class="group pl-6">
-                      <a href="/#projets" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Projets</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Projets  -->
+                        <li class="group pl-6">
+                            <a href="/#projets" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Projets</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Veille  -->
-                    <li class="group pl-6">
-                      <a href="/#veille" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Veille</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
+                        <!--        Veille  -->
+                        <li class="group pl-6">
+                            <a href="/#veille" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Veille</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
 
-        <!--        Contact  -->
-                    <li class="group pl-6">
-                      <a href="/#contact" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
-                      <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
-                    </li>
-                  </ul>
+                        <!--        Contact  -->
+                        <li class="group pl-6">
+                            <a href="/#contact" class="cursor-pointe pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+                            <span class="block h-0.5 w-full bg-transparent group-hover:bg-gold"></span>
+                        </li>
+                    </ul>
                 </div>
                 <div class="block lg:hidden">
-                  <button @click="mobileMenu = true">
-                    <i class="bx bx-menu text-4xl text-gold"></i>
-                  </button>
+                    <button @click="mobileMenu = true">
+                        <i class="bx bx-menu text-4xl text-gold"></i>
+                    </button>
                 </div>
-              </div>
             </div>
+        </div>
 
 
         <!--NavBar Mobile  -->
-            <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
-              <div class="absolute right-0 min-h-screen w-2/3 bg-black py-4 px-8 shadow md:w-1/3">
+        <div class="pointer-events-none fixed inset-0 z-70 min-h-screen bg-black bg-opacity-70 opacity-0 transition-opacity lg:hidden" :class="{ 'opacity-100 pointer-events-auto': mobileMenu }">
+            <div class="absolute right-0 min-h-screen w-2/3 bg-black py-4 px-8 shadow md:w-1/3">
 
-        <!--    Bouton fermer navBar dans format mobile  -->
+                <!--    Bouton fermer navBar dans format mobile  -->
                 <button class="absolute top-0 right-0 mt-4 mr-4" @click="mobileMenu = false">
-                  <img src="/assets/my_img/icon-close.png" class="h-10 w-auto" alt="" />
+                    <img src="/assets/my_img/icon-close.png" class="h-10 w-auto" alt="" />
                 </button>
 
                 <ul class="mt-8 flex flex-col">
 
-        <!--      Profil Mobile  -->
-                  <li class="py-2">
-                    <a href="/#profil" class="pt-0.5 font-header font-semibold uppercase text-white">Profil</a>
-                  </li>
+                    <!--      Profil Mobile  -->
+                    <li class="py-2">
+                        <a href="/#profil" class="pt-0.5 font-header font-semibold uppercase text-white">Profil</a>
+                    </li>
 
-        <!--      Compétences Mobile      -->
-                  <li class="py-2">
-                    <a href="/#competences" class="pt-0.5 font-header font-semibold uppercase text-white">Compétences</a>
-                  </li>
+                    <!--      Compétences Mobile      -->
+                    <li class="py-2">
+                        <a href="/#competences" class="pt-0.5 font-header font-semibold uppercase text-white">Compétences</a>
+                    </li>
 
-        <!--      Expérience professionnelle Mobile  -->
-                  <li class="py-2">
-                    <a href="/#ep" class="pt-0.5 font-header font-semibold uppercase text-white">Expérience professionnelle</a>
-                  </li>
+                    <!--      Expérience professionnelle Mobile  -->
+                    <li class="py-2">
+                        <a href="/#ep" class="pt-0.5 font-header font-semibold uppercase text-white">Expérience professionnelle</a>
+                    </li>
 
-        <!--      Parcours Scolaire Mobile  -->
-                  <li class="py-2">
-                    <a href="/#ps" class="pt-0.5 font-header font-semibold uppercase text-white">Parcours Scolaire</a>
-                  </li>
+                    <!--      Parcours Scolaire Mobile  -->
+                    <li class="py-2">
+                        <a href="/#ps" class="pt-0.5 font-header font-semibold uppercase text-white">Parcours Scolaire</a>
+                    </li>
 
-        <!--      Outils & Logiciels Mobile  -->
-                  <li class="py-2">
-                    <a href="/#ol" class="pt-0.5 font-header font-semibold uppercase text-white">Outils & Logiciels</a>
-                  </li>
+                    <!--      Outils & Logiciels Mobile  -->
+                    <li class="py-2">
+                        <a href="/#ol" class="pt-0.5 font-header font-semibold uppercase text-white">Outils & Logiciels</a>
+                    </li>
 
-        <!--      Projets Mobile  -->
-                  <li class="py-2">
-                    <a href="/#projets" class="pt-0.5 font-header font-semibold uppercase text-white">Projets</a>
-                  </li>
+                    <!--      Projets Mobile  -->
+                    <li class="py-2">
+                        <a href="/#projets" class="pt-0.5 font-header font-semibold uppercase text-white">Projets</a>
+                    </li>
 
-        <!--      Veille Mobile  -->
-                  <li class="py-2">
-                    <a href="/#veille" class="pt-0.5 font-header font-semibold uppercase text-white">Veille</a>
-                  </li>
+                    <!--      Veille Mobile  -->
+                    <li class="py-2">
+                        <a href="/#veille" class="pt-0.5 font-header font-semibold uppercase text-white">Veille</a>
+                    </li>
 
-        <!--      Contact Mobile  -->
-                  <li class="py-2">
-                    <a href="/#contact" class="pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
-                  </li>
+                    <!--      Contact Mobile  -->
+                    <li class="py-2">
+                        <a href="/#contact" class="pt-0.5 font-header font-semibold uppercase text-white">Contact</a>
+                    </li>
 
                 </ul>
-              </div>
             </div>
+        </div>
 
-<!--        Page veille  -->
-            <div>
-              <div class="container py-6 md:py-10">
+        <!--        Page  -->
+        <div>
+            <div class="container py-6 md:py-10">
                 <div class="mx-auto max-w-4xl">
 
-        <!--      Titre Veille  -->
-                  <div class="">
-                    <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
-                      Symfony et PHP
-                    </h1>
+                    <!--      Titre -->
+                    <div class="">
+                        <h1 class="pt-5 font-body text-3xl font-semibold text-primary sm:text-4xl md:text-5xl xl:text-6xl">
+                            Cryptographie
+                        </h1>
 
-        <!--        Information sur Veille  -->
-                    <div class="flex items-center pt-5 md:pt-10">
+                        <!--        Information  -->
+                        <div class="flex items-center pt-5 md:pt-10">
 
-          <!--        Image auteur  -->
-                      <div>
-                        <img
-                          src="/assets/my_img/Nartha.jpg"
-                          class="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
-                          alt="author image"
-                        />
-                      </div>
+                            <!--        Image auteur  -->
+                            <div>
+                                <img
+                                        src="/assets/my_img/Nartha.jpg"
+                                        class="h-20 w-20 rounded-full border-2 border-grey-70 shadow"
+                                        alt="author image"
+                                />
+                            </div>
 
-          <!--        Nom auteur et Date -->
-                      <div class="pl-5">
-                        <span class="block font-body text-xl font-bold text-grey-10">Narththanan SIVANATHAN</span>
-                        <span class="block pt-1 font-body text-xl font-bold text-grey-30">21 Février 2024</span>
-                      </div>
+                            <!--        Nom auteur et Date -->
+                            <div class="pl-5">
+                                <span class="block font-body text-xl font-bold text-grey-10">Narththanan SIVANATHAN</span>
+                                <div class="text-primary hover:text-gold">
+                                    <a href="https://github.com/NarththananSivanathan/Cryptographie">
+                                <span class="block pt-1 font-body font-bold">
+                                    Lien GitHub Cryptographie
+                                    <i class="bx bxl-github text-2xl"></i>
+                                </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                    <!--      Contenu    -->
+                    <div class="prose max-w-none pt-8">
+                        <h1 class="lorem-ipsum-dolor-sit-amet" >Présentation</h1>
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            1. Introduction
+                        </h3>
+
+                        <p style="text-align: justify">
+                            La cryptographie est une méthode qui permet de transférer des textes au destinataire sans
+                            que les autres personnes comprennent le vrai sens du texte. Pour que le destinataire
+                            comprenne la vraie signification du texte, il doit connaître la clé avec laquelle
+                            l’expéditeur a crypté le texte. Il existe plusieurs types de cryptage et de décryptage,
+                            par exemple César, Vigenère, Affine, RSA, etc. Dans le cadre de notre projet, nous avons
+                            décidé de programmer trois types de cryptage et décryptage. Pour faciliter les tâches,
+                            chacun d'entre nous a décidé de programmer un des trois types de cryptage. Aslan Serhat
+                            s'occupe de César, Moraux Brice s'occupe d’Affine et moi, je me suis occupé de Vigenère.
+                        </p>
+
+                        <p style="text-align: justify">
+                            César : Le cryptage avec César est le plus facile des cryptages car il consiste simplement
+                            en un décalage.
+                            <br>
+                            Par exemple : Texte = ABCDE ; Clé = 1 ; Texte décryptage = BCDEF
+                        </p>
+
+                        <p style="text-align: justify">
+                            Vigenère : Le cryptage avec Vigenère est une combinaison entre le texte et la clé.
+                        </p>
+
+                        <p style="text-align: justify">
+                            Affine : Le cryptage avec Affine se fait par des calculs de la forme ax + b. Il faut
+                            définir a et b pour la clé.
+                        </p>
+
+                        <p style="text-align: justify">
+                            Pendant la Seconde Guerre mondiale, certains pays ont utilisé la cryptographie pour
+                            transmettre des messages à leurs alliés sans que leurs ennemis comprennent leur contenu.
+                        </p>
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            2. Cahier des charges
+                        </h3>
+
+                        <p style="text-align: justify">
+                            Pour un cryptage commun, nous devons utiliser un dictionnaire. Dans notre cas, nous allons
+                            utiliser un dictionnaire comprenant l’alphabet (26 lettres), les chiffres de 0 à 9
+                            (10 chiffres) et l’espace. Les autres symboles ne sont pas définis dans notre dictionnaire.
+                            Donc, dans notre dictionnaire, nous avons 37 valeurs allant de 0 à 36. Dans le cadre de ma
+                            partie sur le cryptage Vigenère, nous devons associer le texte et la clé.
+                        </p>
+
+                        <p style="text-align: justify">
+                            Par exemple : Texte = BONJOUR ; Clé = MOT
+                        </p>
+
+                        <img src="/assets/projets/cryptographie/tab.png" alt="Cryptographie-tab-1" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Ensuite, il faut prendre la valeur combinée entre le texte et la clé, puis l'affecter à
+                            l'inverse du dictionnaire pour crypter le message. Pour décrypter, il faut faire l'inverse
+                            du cryptage. Sans oublier, il faut appliquer le modulo ; le modulo est une boucle qui
+                            permet de toujours trouver un caractère dans le dictionnaire.
+                        </p>
+
+                        <p style="text-align: justify">
+                            Par exemple : Si on a 21 + 19 = 40 et que la valeur 40 n'existe pas dans notre dictionnaire,
+                            la valeur du texte crypté doit toujours trouver un caractère.
+                        </p>
+
+                        <p style="text-align: justify">
+                            Au début, l’utilisateur doit définir s'il veut crypter ou décrypter, puis il doit choisir
+                            le type de cryptographie parmi César, Vigenère et Affine. Ensuite, il doit entrer la clé.
+                            Avec cette méthode, l’utilisateur a toute la liberté de choisir son type de cryptage ou de
+                            décryptage.
+                        </p>
+
+                        <h1 class="lorem-ipsum-dolor-sit-amet" >Le Programme</h1>
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            1. Rapport technique
+                        </h3>
+
+                        <p style="text-align: justify">
+                            Dans ce rapport technique, nous allons séparer le programme en deux parties. La première
+                            partie concerne le programme commun et l'autre partie est dédiée au programme qui concerne
+                            Vigenère.
+                        </p>
+
+                        <h4 class="lorem-ipsum-dolor-sit-amet">
+                            Partie n°1 :
+                        </h4>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme dictionnaire :
+                        </h5>
+
+                        <div style="display: flex; align-items: center;">
+                            <div style="flex: 1; padding: 10px;">
+                                <img src="/assets/projets/cryptographie/dico.png" alt="dico" style="width: 80%; height: auto;">
+                            </div>
+                            <div style="flex: 2; text-align: justify">
+                                <p>
+                                    Il y a 37 valeurs dans ce dictionnaire : les lettres de l'alphabet, l'espace et les
+                                    chiffres de 0 à 9. Chaque caractère a sa valeur dans le dico. Pour mieux comprendre
+                                    la fonction du dictionnaire, nous allons le représenter sous la forme d’un tableau.
+                                </p>
+                            </div>
+                        </div>
+
+                        <img src="/assets/projets/cryptographie/tab-dico.png" alt="tab-dico" class="w-full" />
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme inverse dictionnaire :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/dico-invers.png" alt="dico-invers" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Dans cette fonction, nous allons faire l’inverse du dictionnaire : les caractères seront
+                            transformés en valeurs et les valeurs seront transformées en caractères. Pour faciliter la
+                            compréhension, je vais ajouter un tableau similaire à celui du dictionnaire.
+                        </p>
+
+                        <img src="/assets/projets/cryptographie/tab-dico-invers.png" alt="tab-dico-invers" class="w-full" />
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme majuscule :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/maj.png" alt="maj" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Cette fonction permet de transformer le texte entré en minuscule en majuscule, tandis que
+                            le texte déjà en majuscule reste en majuscule, car dans notre dictionnaire, nous n'avons
+                            que les valeurs de l'alphabet en majuscule.
+                        </p>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme texte valeur :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/txt-val.png" alt="txt-val" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Cette fonction permet d'affecter à chaque caractère du dico sa valeur qui se trouve dans le
+                            dictionnaire.
+                        </p>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme valeur texte inverse :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/txt-val-invers.png" alt="txt-val-invers" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Cette fonction permet d'affecter à chaque caractère du dico sa valeur qui se trouve dans
+                            l'inverse du dictionnaire, réalisant ainsi l'inverse de la fonction que j'ai abordée
+                            précédemment.
+                        </p>
+
+                        <h4 class="lorem-ipsum-dolor-sit-amet">
+                            Partie n°2 :
+                        </h4>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme boucle clé et sa valeur dico :
+                        </h5>
+
+                        <div style="display: flex; align-items: center;">
+                            <div style="flex: 1; padding: 10px;">
+                                <img src="/assets/projets/cryptographie/boucle.png" alt="boucle" style="width: 100%; height: auto;">
+                            </div>
+                            <div style="flex: 2; text-align: justify">
+                                <p>
+                                    Cette fonction permet de répéter les caractères de la clé autant de fois que
+                                    nécessaire pour correspondre au nombre de caractères du texte. Ensuite, pour cette
+                                    liste, on affecte les valeurs du dico.
+                                </p>
+                            </div>
+                        </div>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme associé les valeur texte et valeur boucle clé :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/boucle-cle.png" alt="boucle-cle" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Cette fonction associe les valeurs de la clé, qui est répétée, avec les valeurs du texte.
+                            Ainsi, on obtient une liste avec ces valeurs combinées. Ceci est la liste des valeurs du
+                            texte crypté.
+                        </p>
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme modulo :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/modulo.png" alt="modulo" class="w-full" />
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Dès que les valeurs du dico dépassent la valeur 36, donc quand la valeur atteint 37, elle
+                            doit revenir à 0, formant ainsi une boucle. Voyez ce schéma :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/modulo-dico.png" alt="modulo-dico" class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5" />
+
+                        <h5 class="lorem-ipsum-dolor-sit-amet">
+                            Programme inverse : combinaison des valeurs du texte et de la boucle de la clé, suivie de
+                            l'inverse modulo :
+                        </h5>
+
+                        <img src="/assets/projets/cryptographie/decyp.png" alt="decyp" class="w-full" />
+
+                        <p style="text-align: justify">
+                            Cette fonction associe les valeurs de la clé à celles du texte. Nous obtenons donc une liste
+                            de ces valeurs combinées. Ceci est la liste des valeurs du texte déchiffré. Dès que les
+                            valeurs du dictionnaire dépassent la valeur 36, c'est-à-dire quand la valeur vaut -1, elle
+                            doit prendre la valeur 36 comme dans une boucle. Voir ce schéma :
+                        </p>
+
+                        <img src="/assets/projets/cryptographie/modulo-inverse-dico.png" alt="modulo-inverse-dico" class="w-full pl-0 pt-10 sm:w-3/4 lg:w-2/5" />
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            3. Les étapes de la démarche
+                        </h3>
+
+                        <p style="text-align: justify">
+                            Au début, nous avons décidé de répartir le travail. Ainsi, chacun d'entre nous aura une
+                            part équitable. Ensuite, nous avons effectué des recherches sur Internet pour comprendre le
+                            véritable sens du cryptage et du décryptage. Nous avons aussi étudié les différents types
+                            de cryptage et de décryptage que le professeur nous avait recommandés, à savoir ceux de
+                            César, Vigenère et Affine. Parallèlement, il nous a conseillé de créer un dictionnaire. Au
+                            début, nous avons créé ce dictionnaire à trois. Nous avons ensuite essayé à plusieurs
+                            reprises de crypter des textes sur des feuilles et avons trouvé des méthodes qui nous ont
+                            permis de trouver des solutions avec un programme sur Edupython.
+                        </p>
+
+                        <h1 class="lorem-ipsum-dolor-sit-amet" >Conclusion</h1>
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            1. Problèmes rencontrés
+                        </h3>
+
+                        <p style="text-align: justify">
+                            Au début de notre projet, nous voulions créer le jeu Othello, mais un autre groupe avait
+                            également cette idée, nous avons donc abandonné le projet. Finalement, l’autre groupe a
+                            aussi abandonné le projet sur Othello. Après avoir renoncé à Othello, nous voulions faire
+                            un jeu de bataille navale, mais finalement, nous avons pensé que nous n'aurions pas le
+                            temps de le terminer. À la fin, le professeur a proposé des projets aux groupes qui
+                            n’avaient pas d'idée, et c’est lui qui nous a donné l’idée de notre projet. Pendant le
+                            projet, j'ai perdu beaucoup de temps à rechercher sur internet, et à cause du temps perdu
+                            à choisir notre projet, nous n'avons pas eu le temps de faire l'interface graphique.
+                        </p>
+
+                        <h3 class="lorem-ipsum-dolor-sit-amet">
+                            2. Après le projet
+                        </h3>
+
+                        <p style="text-align: justify">
+                            Après le projet, j'ai acquis beaucoup de connaissances en Python, ce qui peut être utile
+                            pour mes études supérieures en informatique. Grâce à ce projet et à celui en Sciences de
+                            l'ingénieur, je sais comment présenter un projet.
+                        </p>
+
+                        <h2 class="lorem-ipsum-dolor-sit-amet">
+                            Documentation
+                        </h2>
+
+                        <ul>
+                            <li>
+                                <a href="/assets/projets/cryptographie/Cryptographie.pdf" class="text-primary hover:text-gold">
+                                    <b>Document</b>
+                                </a>
+                            </li>
+                        </ul>
+
+
 
                     </div>
-                  </div>
-
-
-        <!--      Contenu Veille    -->
-                  <div class="prose max-w-none pt-8">
-                  <h2 id="lorem-ipsum-dolor-sit-amet">
-                    Quels impacts ont les nouveautés de Symfony et PHP sur le développement web et leur valeur ajoutée pour les
-                    développeurs et entreprises modernes ?
-                  </h2>
-
-
-                  <p>
-                      Bientôt dispobile.........
-                  </p>
-
-
-<!--                  <p>-->
-<!--                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
-<!--                    d olore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex-->
-<!--                    ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat-->
-<!--                    nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit-->
-<!--                    anim id est laborum.-->
-<!--                  </p>-->
-
-<!--                  <p>-->
-<!--                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam-->
-<!--                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt-->
-<!--                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia-->
-<!--                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Ut enim ad-->
-<!--                    minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea-->
-<!--                    commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil-->
-<!--                    molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?-->
-<!--                  </p>-->
-
-<!--                  <h3 id="lorem-ipsum-dolor-sit-amet-1">Lorem ipsum dolor sit amet</h3>-->
-
-<!--                  <p>-->
-<!--                    Possent quippe. Conata fera ab Hersilie iam auditur haesit. Culpa ignis retia Aonides ictus crescendo-->
-<!--                    micantes, petere, ambustaque vicem in digitos iubet cornigeris.-->
-<!--                  </p>-->
-
-<!--                  <ul>-->
-<!--                    <li>Iura demens satus vino simulac celanda</li>-->
-<!--                    <li>Exhibuere frustra utque</li>-->
-<!--                    <li>Iura demens satus vino simulac celanda</li>-->
-<!--                    <li>Exhibuere frustra utque</li>-->
-<!--                    <li>Panda pars umidus</li>-->
-<!--                  </ul>-->
-
-<!--                  <h4 id="lorem-ipsum-dolor-sit-amet-2">Lorem ipsum dolor sit amet</h4>-->
-
-<!--                  <p>-->
-<!--                    Possent quippe. Conata fera ab Hersilie iam auditur haesit. Culpa ignis retia Aonides ictus crescendo-->
-<!--                    micantes, petere, ambustaque vicem in digitos iubet cornigeris.-->
-<!--                  </p>-->
-
-<!--                  <div class="language-plaintext highlighter-rouge">-->
-<!--                    <div class="highlight">-->
-<!--                      <pre class="highlight">-->
-<!--                        <code>-->
-<!--                          fonts.forEach(font =&gt; {-->
-<!--                            const { id, name, likes } = font;-->
-<!--                            if (-->
-<!--                              likes &gt;= 30-->
-<!--                              || (likes === 50 &amp;&amp; likes != 0)-->
-<!--                              || favorites[id]-->
-<!--                            ) {-->
-<!--                            coolFonts++;-->
-<!--                            console.log(`${name} is cool!`);-->
-<!--                            }-->
-<!--                          });-->
-<!--                        </code>-->
-<!--                      </pre>-->
-<!--                    </div>-->
-<!--                  </div>-->
-
-<!--                  <p>-->
-<!--                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam-->
-<!--                    rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt-->
-<!--                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia-->
-<!--                    consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem-->
-<!--                    ipsum quia dolor sit amet, consectetur, adipisci velit.-->
-<!--                  </p>-->
-<!--                </div>-->
-
-
-        <!--    Fin Auteur    -->
-                  <div class="flex flex-col items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20 mt-10">
-                  <div class="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
-                    <img
-                            src="/assets/my_img/Nartha.jpg"
-                            class="rounded-full shadow"
-                            alt="author image"
-                    />
-                  </div>
-                  <div class="ml-0 text-center md:ml-10 md:w-5/6 md:text-left pt-7">
-                    <h3 class="pt-10 font-body text-2xl font-bold text-secondary md:pt-0">
-                      Narththanan SIVANATHAN
-                    </h3>
-                    <p class="pt-3 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
-                      Développeur junior Back-End
-                    </p>
-                    <div class="flex items-center justify-center pt-3 md:justify-start">
-                      <a href="https://www.linkedin.com/in/narththanan-sivanathan-8272aa230/" class="pl-4">
-                        <i class="bx bxl-linkedin text-2xl text-primary hover:text-black"></i>
-                      </a>
-                      <a href="https://github.com/NarththananSivanathan" class="pl-4">
-                        <i class="bx bxl-github text-2xl text-primary hover:text-black"></i>
-                      </a>
+                    <div class="mt-10 flex justify-between border-t border-lila py-12">
+                        <a href="/projets/code-dreams.html" class="flex items-center">
+                            <i class="bx bx-left-arrow-alt text-2xl text-primary"></i>
+                            <span class="block pl-2 font-body text-lg font-bold uppercase text-primary md:pl-5">Projet précédent</span>
+                        </a>
+                        <a href="/projets/coding-game.html" class="flex items-center">
+                            <span class="block pr-2 font-body text-lg font-bold uppercase text-primary md:pr-5">Prochain projet</span>
+                            <i class="bx bx-right-arrow-alt text-2xl text-primary"></i>
+                        </a>
                     </div>
-                  </div>
+
+                    <!--    Fin Auteur    -->
+                    <div class="flex flex-col items-center border-t border-lila py-12 pt-12 md:flex-row md:items-start xl:pb-20">
+                        <div class="w-3/4 sm:w-2/5 lg:w-1/4 xl:w-1/5">
+                            <img
+                                    src="/assets/my_img/Nartha.jpg"
+                                    class="rounded-full shadow"
+                                    alt="author image"
+                            />
+                        </div>
+                        <div class="ml-0 text-center md:ml-10 md:w-5/6 md:text-left pt-7">
+                            <h3 class="pt-10 font-body text-2xl font-bold text-secondary md:pt-0">
+                                Narththanan SIVANATHAN
+                            </h3>
+                            <p class="pt-3 font-body text-lg leading-8 text-secondary sm:leading-9 md:text-xl md:leading-9 lg:leading-9 xl:leading-9">
+                                Développeur junior Back-End
+                            </p>
+                            <div class="flex items-center justify-center pt-3 md:justify-start">
+                                <a href="https://www.linkedin.com/in/narththanan-sivanathan-8272aa230/" class="pl-4">
+                                    <i class="bx bxl-linkedin text-2xl text-primary hover:text-black"></i>
+                                </a>
+                                <a href="https://github.com/NarththananSivanathan" class="pl-4">
+                                    <i class="bx bxl-github text-2xl text-primary hover:text-black"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                </div>
-              </div>
             </div>
+        </div>
 
 
         <!--Partie Copyright  -->
-            <div class="bg-primary">
-              <div class="container flex flex-col justify-between py-6 sm:flex-row">
+        <div class="bg-primary">
+            <div class="container flex flex-col justify-between py-6 sm:flex-row">
                 <p class="text-center font-body text-white md:text-left">
-                  Copyright 2024 © SIVANATHAN Narththanan
+                    Copyright 2024 © SIVANATHAN Narththanan
                 </p>
                 <div class="flex items-center justify-center pt-5 sm:justify-start sm:pt-0">
-                  <a href="https://www.linkedin.com/in/narththanan-sivanathan-8272aa230/" class="pl-4">
-                    <i class="bx bxl-linkedin text-2xl text-white hover:text-black"></i>
-                  </a>
-                  <a href="https://github.com/NarththananSivanathan" class="pl-4">
-                    <i class="bx bxl-github text-2xl text-white hover:text-black"></i>
-                  </a>
+                    <a href="https://www.linkedin.com/in/narththanan-sivanathan-8272aa230/" class="pl-4">
+                        <i class="bx bxl-linkedin text-2xl text-white hover:text-black"></i>
+                    </a>
+                    <a href="https://github.com/NarththananSivanathan" class="pl-4">
+                        <i class="bx bxl-github text-2xl text-white hover:text-black"></i>
+                    </a>
                 </div>
-              </div>
             </div>
-
-          </div>
-
-          <script src="/assets/js/main.js"></script>
         </div>
 
-    </body>
+    </div>
+
+    <script src="/assets/js/main.js"></script>
+</div>
+
+</body>
 </html>
